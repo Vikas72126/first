@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="first.css">
+    <link rel="stylesheet" href="gallery.html">
+    <link rel="stylesheet" href="aboutus.html">
+    <link rel="stylesheet" href="service.html">
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="first.html">
+</head>
+<body>
+<header>
+    <div class="navbar">
+       <div class="logo">
+        <a href="#">MyWeb</a>
+       </div> 
+       <ul class="links">
+        <li><a href="first.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="service.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+       </ul>
+       <a href="aboutus.html" class="action_btn">About Me</a>
+       <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+       </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="first.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="service.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <a href="aboutus.html" class="action_btn">About Me</a>
+    </div>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Welcome</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laborum voluptatem praesentium nobis dicta, quasi deleniti perspiciatis ut distinctio vel repudiandae.
+        </p>
+    </section>
+</main>
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+     
+    toggleBtn.onclick = function()
+    {
+        dropDownMenu.classList.toggle('open')
+         const isOpen = toggleBtnIcon.classList.contains('open')
+         toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+
+</script>
+</body>
+</html>
